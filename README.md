@@ -62,6 +62,38 @@ python detect.py --weights runs/train/yolov9-c2/weights/best.pt --source ../inpu
 
 You can download the pretrained yolov9-c.pt model from [google drive](https://drive.google.com/file/d/1nV5C3dbc_Q3CoczHaERTojr78-SFPdMI/view?usp=sharing) for fire detection. Note that this model was trained on the fire dataset for 50 epochs. Refer to [link](https://github.com/WongKinYiu/yolov9/issues/162) to fix for detect.py runtime error when running yolov9.
 
+## 🖥️ React UI
+
+This project now includes a React-based user interface for easier interaction with the fire detection model.
+
+### Features
+- Upload images for fire detection
+- Capture images from webcam for real-time fire detection
+- View detection results with bounding boxes
+- Responsive design for desktop and mobile devices
+
+### Running the UI
+
+1. Start the backend API:
+```shell
+cd backend
+./run.sh
+```
+
+2. Start the React frontend:
+```shell
+cd frontend/fire-detection-ui
+npm install
+npm start
+```
+
+3. Open your browser and navigate to:
+```
+http://localhost:3000
+```
+
+For more details, see the README files in the `frontend` and `backend` directories.
+
 ## ⏱️ Results
 The following charts were produced after training YOLOv5s with input size 640x640 on the fire dataset for 10 epochs.
 
